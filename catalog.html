@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HTML Academy: Седона</title>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+        <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
@@ -24,32 +26,41 @@
                     </li>
                 </ul>
                 <a class="header-logo" href="./">
-                    <img src="img/header-logo.png" alt="логотип" width="67" height="55" >
+                    <img src="img/header-logo.png" alt="логотип" width="138" height="70" >
                 </a>
             </header>
 
             <main class="clearfix">
                 <section class="filters clearfix">
                     <form action="" method="get">
-                        <div class="filters-infrastructure">
+                        <div class="filters-infrastructure clearfix">
                             <h3>Инфраструктура:</h3>
-                            <label><input type="checkbox" name="pool" checked>Бассейн</label>
-                            <label><input type="checkbox" name="parking">Парковка</label>
-                            <label><input type="checkbox" name="wi-fi">Wi-Fi</label>
+                            <input type="checkbox" name="pool" id="pool" checked>
+                            <label for="pool">Бассейн</label>
+                            <input type="checkbox" name="parking" id="parking">
+                            <label for="parking">Парковка</label>
+                            <input type="checkbox" name="wi-fi" id="wi-fi">
+                            <label for="wi-fi">Wi-Fi</label>
                         </div>
-                        <div class="filters-property-type">
+                        <div class="filters-property-type clearfix">
                             <h3>Тип жилья:</h3>
-                            <label><input type="checkbox" name="hotel" checked>Гостиница</label>
-                            <label><input type="checkbox" name="motel" checked>Мотель</label>
-                            <label><input type="checkbox" name="apartments" checked>Апартаменты</label>
+                            <input type="checkbox" name="hotel" id="hotel" checked>
+                            <label for="hotel">Гостиница</label>
+                            <input type="checkbox" name="motel" id="motel" checked>
+                            <label for="motel">Мотель</label>
+                            <input type="checkbox" name="apartments" id="apartments" checked>
+                            <label for="apartments">Апартаменты</label>
                         </div>
-                        <div class="filters-price">
+                        <div class="filters-price clearfix">
                             <h3>Стоимость в сутки(р):</h3>
                             <div class="range-number">
                                 <span>от 0</span>
                                 <span>до 3000</span>
                             </div>
-                            <input type="range" min="0" max="3000">
+                            <div class="range">
+                                <span class="range-min"></span>
+                                <span class="range-max"></span>
+                            </div>
                             <input type="submit" value="Показать">  
                         </div>
                     </form>
@@ -70,19 +81,19 @@
                 <section class="results clearfix">
                     <div class="wrapper">
                         <div class="results-img">
-                            <img src="img/amara-resort-spa.jpg" alt="Amara resort & spa">
+                            <img src="img/amara-resort-spa.jpg" width="135" height="90" alt="Amara resort & spa">
                         </div>
                         <div class="results-description">
-                            <h3>
-                                Amara resort & spa
-                            </h3>
+                            <a class="title" href="#">
+                                    Amara resort & spa                             
+                            </a>
                             <div class="results-description-info">
                                 <span>Гостиница</span>
-                                <span>от 4000 р.</span>
+                                <a class="btn read-more" href="#">Подробнее</a>                                                                
                             </div>
-                            <div class="results-description-button">
-                                <a class="read-more" href="#">Подробнее</a>
-                                <a class="book" href="#">Забронировать</a>
+                            <div class="results-description-book">
+                                <span>от 4000 р.</span>
+                                <a class="btn book" href="#">Забронировать</a>
                             </div>
                         </div>
                         <div class="results-rating">
@@ -95,19 +106,19 @@
                     </div>
                     <div class="wrapper">
                         <div class="results-img">
-                            <img src="img/desert-quailinn.jpg" alt="Desert quailinn">
+                            <img src="img/desert-quailinn.jpg" width="135" height="90" alt="Desert quailinn">
                         </div>
                         <div class="results-description">
-                            <h3>
+                            <a class="title" href="#">
                                 Desert quailinn
-                            </h3>
+                            </a>
                             <div class="results-description-info">
                                 <span>Мотель</span>
-                                <span>от 3000 р.</span>
+                                <a class="btn read-more" href="#">Подробнее</a>                                
                             </div>
-                            <div class="results-description-button">
-                                <a class="read-more" href="#">Подробнее</a>
-                                <a class="book" href="#">Забронировать</a>
+                            <div class="results-description-book">
+                                <span>от 3000 р.</span>
+                                <a class="btn book" href="#">Забронировать</a>
                             </div>
                         </div>
                         <div class="results-rating">
@@ -120,19 +131,19 @@
                     </div>
                     <div class="wrapper">
                         <div class="results-img">
-                            <img src="img/villas-at-poco-diablo.jpg" alt="Villas at poco diablo">
+                            <img src="img/villas-at-poco-diablo.jpg" width="135" height="90" alt="Villas at poco diablo">
                         </div>
                         <div class="results-description">
-                            <h3>
+                            <a class="title" href="#">
                                 Villas at poco diablo
-                            </h3>
+                            </a>
                             <div class="results-description-info">
                                 <span>Апартаменты</span>
-                                <span>от 2000 р.</span>
+                                <a class="btn read-more" href="#">Подробнее</a>                                                               
                             </div>
-                            <div class="results-description-button">
-                                <a class="read-more" href="#">Подробнее</a>
-                                <a class="book" href="#">Забронировать</a>
+                            <div class="results-description-book">
+                                <span class="price">от 2000 р.</span>
+                                <a class="btn book" href="#">Забронировать</a> 
                             </div>
                         </div>
                         <div class="results-rating">
