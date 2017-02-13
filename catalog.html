@@ -6,7 +6,7 @@
         <title>HTML Academy: Седона</title>
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/style-min.css" rel="stylesheet">
     </head>
     <body>
         <div class="container shadows">
@@ -32,7 +32,7 @@
 
             <main class="clearfix">
                 <section class="filters clearfix">
-                    <form action="" method="get">
+                    <form action="#" method="get">
                         <div class="filters-infrastructure clearfix">
                             <h3>Инфраструктура:</h3>
                             <input type="checkbox" name="pool" id="pool" checked>
@@ -54,10 +54,11 @@
                         <div class="filters-price clearfix">
                             <h3>Стоимость в сутки(р):</h3>
                             <div class="range-number">
-                                <span>от 0</span>
-                                <span>до 3000</span>
+                                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
                             </div>
                             <div class="range">
+                                <div class="bar"></div>
                                 <span class="range-min"></span>
                                 <span class="range-max"></span>
                             </div>
@@ -66,7 +67,7 @@
                     </form>
                 </section>
                 <section class="sorting clearfix">
-                    <span class="sorting-result">Найдено:3</span>
+                    <span class="sorting-result">Найдено: 3</span>
                     <div class="sorting-filters">
                         <span>Сортировка:</span>
                         <a class="sorting-price active" href="#">По цене</a>
@@ -100,7 +101,7 @@
                             <div class="results-rating-star star-4">
                             </div>
                             <div class="results-rating-number">
-                                Рейтинг:8,5
+                                Рейтинг: 8,5
                             </div>
                         </div>
                     </div>
@@ -125,7 +126,7 @@
                             <div class="results-rating-star star-3">
                             </div>
                             <div class="results-rating-number">
-                                Рейтинг:8,9
+                                Рейтинг: 8,9
                             </div>
                         </div>
                     </div>
@@ -150,14 +151,14 @@
                             <div class="results-rating-star star-2">
                             </div>
                             <div class="results-rating-number">
-                                Рейтинг:9,2
+                                Рейтинг: 9,2
                             </div>
                         </div>
                     </div>
                 </section>
             </main>
 
-            <footer class="clearfix">
+            <footer class="footer clearfix">
                 <div class="col-33 footer-instagramm">
                     <a href="#">
                         #visitsedona

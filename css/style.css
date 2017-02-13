@@ -31,7 +31,7 @@ h3{
     width: 1200px;
     margin: 0 auto;
 }
-.clearfix::after {
+.clearfix::after{
     content: "";
     display: table;
     clear: both;
@@ -40,7 +40,7 @@ h3{
     position: relative;
     background-color: #ffffff;
 }
-.header-main { 
+.header-main{ 
     margin: 0;
     padding-left: 6%;
     padding-right: 6%;    
@@ -77,6 +77,9 @@ h3{
     color:#000000;
     font-weight: bold;
 }
+.header-main li.active a{
+    color: #766357;
+}
 .header-main li a:hover{
     color: #81b3d2;
 }
@@ -96,12 +99,12 @@ main{
 .intro{
     min-height: 510px;
     background: url(../img/intro-mask.png) 50% 100% no-repeat,
-                url(../img/welcome-text.png) 50% 50% no-repeat,
-                url(../img/bg-intro.jpg)0 20% no-repeat;    
+        url(../img/welcome-text.png) 50% 50% no-repeat,
+        url(../img/bg-intro.jpg)0 20% no-repeat;    
     background-color: #ffffff;
     margin-bottom: 60px;
 }
-.info-city {
+.info-city{
     margin-bottom: 50px;
     text-align: center;
     color: #000000;    
@@ -128,24 +131,25 @@ main{
     box-sizing: border-box;
 }
 .cause-tagline{
-    padding: 52px 48px;    
+    padding: 53px 48px;    
     float: left;
     background-color: #81b3d2;
     color: #ffffff;
     text-align: center;
 }
 .cause-tagline h2{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    width: 200px;
 }
-.cause-tagline:first-child {
-    padding: 52px 54px;
+.cause-tagline:first-child{
+    padding: 53px 54px;
 }
-.cause-tagline .cause-number {
+.cause-tagline .cause-number{
     display: block;
     margin: 0;
-    padding-top: 23px;
-    padding-bottom: 24px;
+    padding-top: 24px;
+    padding-bottom: 21px;
     color: #ffffff;
 }
 .cause-tagline p{
@@ -166,10 +170,11 @@ main{
     top: 0;
     bottom: 0;
     right: 0;
+    background-color: #cacaca;
 }
 .cause-description{
     float: left;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
     padding-left: 48px;
     padding-right: 48px;
     padding-top: 162px;
@@ -199,7 +204,7 @@ main{
     margin: 0;
     color: #7d7d7d;
 }
-.cause-number {
+.cause-number{
     display: block;    
     margin-bottom: 32px;
     color: #7d7d7d;
@@ -209,7 +214,8 @@ main{
     background-color: #f2f2f2;    
 }
 .cause-bg .cause-description{
-    padding: 50px 65px;
+    padding: 48px 65px;
+    margin-bottom: 10px;
 }
 .cause-bg .cause-number{
     margin-bottom: 20px;
@@ -218,7 +224,7 @@ main{
     position: relative;
     margin: 0;
     padding: 0;
-    padding-top: 45px;
+    padding-top: 55px;
     text-align: center;
 }
 .search h2{  
@@ -234,7 +240,7 @@ main{
     color: #5d5d5d;
     line-height: 24px;
 }
-.search .btn-search {
+.search .btn-search{
     width: 568px;
     padding: 30px 0;
     background-color: #766357;
@@ -257,7 +263,17 @@ main{
     box-sizing: border-box;
     background-color: #ffffff;
     box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: 0.4s;;
+    transition: 0.4s;
     z-index: 5;
+}
+.search-modal-hidden{
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: 0.4s;;
+    transition: 0.4s;
 }
 .fields{
     position: relative;
@@ -388,9 +404,9 @@ main{
 }
 .map{
     min-height: 474px;
-    background: url(../img/map.jpg) no-repeat;
+    background: #cacaca url(../img/map.jpg) no-repeat;
 }
-footer{  
+.footer{  
     padding: 36px 0;
     background-color: #ffffff;
     text-align: center;
@@ -432,6 +448,7 @@ footer{
     position: absolute;
     top:50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
@@ -454,6 +471,7 @@ footer{
 .footer-copyright{
     float: left;
     font-size: 0;
+    padding-top: 6px;
 }
 .footer-copyright p{
     display: inline-block;
@@ -482,7 +500,7 @@ footer{
 .filters{
     padding: 30px 6%;
     padding-bottom: 14px;
-    background: url(../img/filter-background.jpg) center 15% no-repeat;
+    background: #cacaca url(../img/filter-background.jpg) center 15% no-repeat;
     color: #ffffff;
     box-sizing: border-box;
 }
@@ -500,6 +518,7 @@ footer{
     margin-left: 40px;
     padding-top: 9px;
     padding-bottom: 16px;
+    cursor: pointer;
 }
 .filters input[type="checkbox"] + label::after{
     content: "";
@@ -564,69 +583,85 @@ footer{
     text-align: left;
 }
 .filters-price .range-number{
+    position: relative;
+    height: 32px;
     margin-left: 10px;
-    margin-bottom: 20px;
-    padding: 5px 0;
-    border: 2px solid #ffffff; 
-    border-radius: 3px;
-    box-sizing: border-box;
-    font-size: 0;
+    margin-bottom: 20px;    
+    font-size: 0;    
+    border: 2px solid #ffffff;
+    border-radius: 2px;
 }
-.range-number span{
+.filters-price .range-number::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 22px;
+    background: #ffffff;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.range-number label{
     display: inline-block;
-    width: 50%;
-    text-align: center;
+    text-align: left;
     font-size: 14px;
-    line-height: 21px;
+    line-height: 30px;
     vertical-align: top;
-    box-sizing: border-box;
+    cursor: pointer;
 }
-.range-number span:first-child{
-    border-right: 2px solid #ffffff;
+.range-number .min-price,
+.range-number .max-price{
+    width: 90px;   
+    padding-left: 55px;
+}
+.range-number input{
+    width: 50px;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
+    outline: #ffffff;
 }
 .range{
     position: relative;
     height: 2px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.3);;
     margin-bottom: 32px;
     margin-left: 10px;
 }
+.range .bar{
+    width: 80%;
+    height: 2px;
+    background: #ffffff;
+}
 .range span{    
     position: absolute;
-    top:-10px;
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    cursor: pointer;
-}
-.range span::after{
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    display: block;
+    top: -9px;
     width: 4px;
     height: 4px;
-    margin-left: -2px;
-    margin-top: -2px;    
+    background: #ababab;
+    border: 8px solid #ffffff;
     border-radius: 50%;
-    background-color: #ababab;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
 }
-.range span:hover::after{
-    content: "";
-    background-color: #1c4f80;
+.range span:hover{
+    background: #1c4f80;
+}
+.range .range-min{
+    left: 0;
 }
 .range .range-max{
-    margin-left: 252px;
+    left: 80%;
 }
 .filters-price input[type="submit"]{
     width: 135px;
     padding: 6px 0;
     background-color: transparent;
     border: 2px solid #ffffff;
-    border-radius: 3px;
+    border-radius: 2px;
     font-family: "PT Sans","Arial",sans-serif;
     font-size: 14px;
     line-height: 21px;
@@ -696,10 +731,11 @@ footer{
     padding: 0 6%;
 }
 .wrapper{
+    position: relative;
     border-bottom: 1px solid #e5e5e5;
     padding: 30px 0;
 }
-.wrapper::after {
+.wrapper::after{
     content: "";
     display: table;
     clear: both;
@@ -743,11 +779,12 @@ footer{
 .results-description-info span{
     display: block;
     margin-bottom: 14px;
+    max-width: 150px;
     font-size: 14px;
     line-height: 21px;
     color: #333333;
 }
-.results .btn {
+.results .btn{
     margin: 0;
     padding: 3px 16px;
     font-family: "PT Sans","Arial",sans-serif;
@@ -758,6 +795,7 @@ footer{
     color: #ffffff;
     text-decoration: none;
     background-color: #81b3d2;
+    text-align: center;
 }
 .results .read-more:hover{
     background-color: #669ec0;
@@ -772,6 +810,7 @@ footer{
 .results-description-book span{
     display: block;
     margin-bottom: 14px;
+    max-width: 150px;
     font-size: 14px;
     line-height: 21px;
     color: #333333;
@@ -787,8 +826,7 @@ footer{
     color: rgba(255,255,255,0.3);
 }
 .results-rating{
-    float: right;
-    position: relative;    
+    float: right;   
     min-height: 90px;
 }
 .results-rating-star{
@@ -807,13 +845,13 @@ footer{
     width: 72px;
 }
 .star-2{
-     width: 48px;
+    width: 48px;
 }
 .results-rating-number{
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     right: 0;
-    padding: 8px 16px;
+    padding: 3px 13px;
     background-color: #f2f2f2;
     color: #666666;
 }
