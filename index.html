@@ -6,11 +6,11 @@
         <title>HTML Academy: Седона</title>
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/style-min.css" rel="stylesheet">
     </head>
     <body>
         <div class="container shadows">
-            <header class="header clearfix">
+            <header class="header">
                 <ul class="header-main">
                     <li>
                         <a href="#">Информация</a>
@@ -29,7 +29,7 @@
                     <img src="img/header-logo.png" alt="логотип" width="138" height="70" >
                 </a>
             </header>
-            <main class="clearfix">
+            <main>
                 <div class="intro">
                 </div>
                 <div class="info-city">
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="cause clearfix"> 
-                    <div class="clearfix">
+                    <div class="overflow-hidden clearfix">
                         <div class="cause-tagline col-33">
                             <h2>
                                 Настоящий
@@ -86,7 +86,7 @@
                         </div>
                     </div>
 
-                    <div class="clearfix">
+                    <div class="overflow-hidden clearfix">
                         <div class="cause-photo col-66">
                             <img src="img/devils-bridge.jpg" width="800" height="400" alt="Мост дьявола">
                         </div>
@@ -139,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="search clearfix">
+                <div class="search">
                     <h2>
                         Заинтересовались?
                     </h2>
@@ -149,35 +149,33 @@
                     </p>
                     <button type="button" id="search" class="btn-search">Поиск гостиницы в Седоне</button>
                     <div class="search-modal">
-                        <form class="serch-form" action="#" method="post">
-                            <div class="clearfix">
-                                <div class="fields">
-                                    <label for="arrival-date">Дата заезда:</label>
-                                    <input type="text" name="arrival-date"  id="arrival-date" placeholder="24 апреля 2017" required>
-                                    <span class="fields-after"></span>
-                                </div>
-                                <div class="fields">
-                                    <label for="departure-date">Дата выезда:</label>
-                                    <input type="text" name="departure-date" id="departure-date" placeholder="4 июля 2017" required>
-                                    <span class="fields-after"></span>
-                                </div>
-                                <div class="search-wrapper">
-                                    <label for="adults">Взрослые:</label>
-                                    <div class="adult">
-                                        <button type="button" class="btn minus">-</button>
-                                        <input type="text" name="adults" id="adults" value="2">
-                                        <button type="button" class="btn plus">+</button> 
-                                    </div>
-                                </div>
-                                <div class="search-wrapper">
-                                    <label for="children">Дети:</label>
-                                    <div class="child">
-                                        <button type="button" class="btn minus">-</button>
-                                        <input type="text" name="children" id="children" value="0">
-                                        <button type="button" class="btn plus">+</button> 
-                                    </div>
+                        <form class="serch-form clearfix" action="#" method="post">                            
+                            <div class="fields">
+                                <label for="arrival-date">Дата заезда:</label>
+                                <input type="text" name="arrival-date"  id="arrival-date" placeholder="24 апреля 2017" required>
+                                <span class="fields-after"></span>
+                            </div>
+                            <div class="fields">
+                                <label for="departure-date">Дата выезда:</label>
+                                <input type="text" name="departure-date" id="departure-date" placeholder="4 июля 2017" required>
+                                <span class="fields-after"></span>
+                            </div>
+                            <div class="search-wrapper">
+                                <label for="adults">Взрослые:</label>
+                                <div class="adult">
+                                    <button type="button" class="btn minus">-</button>
+                                    <input type="text" name="adults" id="adults" value="2">
+                                    <button type="button" class="btn plus">+</button> 
                                 </div>
                             </div>
+                            <div class="search-wrapper">
+                                <label for="children">Дети:</label>
+                                <div class="child">
+                                    <button type="button" class="btn minus">-</button>
+                                    <input type="text" name="children" id="children" value="0">
+                                    <button type="button" class="btn plus">+</button> 
+                                </div>
+                            </div>                            
                             <input type="submit" value="Найти"> 
                         </form>
                     </div>                

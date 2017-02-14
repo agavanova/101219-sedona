@@ -101,7 +101,7 @@ main{
     background: url(../img/intro-mask.png) 50% 100% no-repeat,
         url(../img/welcome-text.png) 50% 50% no-repeat,
         url(../img/bg-intro.jpg)0 20% no-repeat;    
-    background-color: #ffffff;
+    background-color: #5496bd;
     margin-bottom: 60px;
 }
 .info-city{
@@ -129,6 +129,9 @@ main{
 .col-66{
     width: 66.66%;
     box-sizing: border-box;
+}
+.overflow-hidden{
+    overflow: hidden;
 }
 .cause-tagline{
     padding: 53px 48px;    
@@ -158,19 +161,14 @@ main{
 .cause-photo{
     position: relative;
     float: left;
-    min-height: 256px;    
-    float: left;
-    overflow: hidden;
+    min-height: 256px;
+    background-color: #81b3d2;
 }
 .cause-photo img{
     position: absolute;
     width: 100%;
-    margin: auto;
     left: 0;
     top: 0;
-    bottom: 0;
-    right: 0;
-    background-color: #cacaca;
 }
 .cause-description{
     float: left;
@@ -765,6 +763,7 @@ main{
     margin-top: -4px;
     margin-bottom: 6px;
     padding: 0;
+    width: 350px;
 }
 .results-description a.title:hover{
     color: #81b3d2;
